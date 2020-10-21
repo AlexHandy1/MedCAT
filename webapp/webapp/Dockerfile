@@ -24,5 +24,5 @@ RUN pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2
 # Build the db
 RUN python manage.py makemigrations && \
     python manage.py makemigrations demo && \
-    python manage.py migrate && \
-    python manage.py migrate demo 
+    python manage.py migrate --run-syncdb && \
+    python manage.py migrate demo \
