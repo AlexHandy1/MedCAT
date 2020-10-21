@@ -4,4 +4,5 @@ from .views import *
 
 urlpatterns = [
     path('', train_annotations, name='train_annotations'),
+    path('upload', upload_cdb, name='upload_cdb')
 ]
